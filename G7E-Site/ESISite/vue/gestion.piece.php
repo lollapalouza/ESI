@@ -56,8 +56,10 @@ if(isset($_POST['formsuppression'])){
         $erreur2 = "Remplir tous les champs !";
     }
 }
-?>
 
+
+
+?>
 
 <!doctype html>
 
@@ -65,7 +67,7 @@ if(isset($_POST['formsuppression'])){
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="vue/CSS/css.gestion.piece.css" />
-    <script type="text/javascript" src="vue/JS/js.gestion.piece.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -102,14 +104,14 @@ if(isset($_POST['formsuppression'])){
                     var z = 188;
                 }
                 else {
-                    var xcolor = 1;
-                    var ycolor = 96;
-                    var zcolor = 162;
-                    var x = 255;
-                    var y = 255;
-                    var z = 255;
+                     xcolor = 1;
+                     ycolor = 96;
+                     zcolor = 162;
+                     x = 255;
+                     y = 255;
+                     z = 255;
                 }
-                newLI.style.width =  Math.round(Math.random()*(250 - 180) + 180) + "px";
+                newLI.style.width =  Math.random()*100 + 100 + "px";
                 newLI.style.color = "rgb(" + x + "," + y + "," + z + ")";
                 newLI.style.fontFamily = "Segoe UI";
                 newLI.style.fontSize = 25 + "px";
@@ -117,14 +119,16 @@ if(isset($_POST['formsuppression'])){
                 newLI.className = "liste";
                 newLI.id = tabid_php[i];
                 newLI.innerHTML = nom;
-                newLI.addEventListener("click", function(){alert(this.id);});
+                newLI.addEventListener("click", function () {
+                    var id_session = this.id;
+                    $.post("vue/JS/piece.php",{id_sess: id_session},function(){
+                        document.location.href="index.php?cible=capteur&fonction=capteur"
+                    })
+                });
                 document.getElementById('current').appendChild(newLI);
             }
-
-
         </script>
     </div>
-
     <div class="conteneur_interne">
         <div class = "Formulaire" align="center">
             Ajout
