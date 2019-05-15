@@ -88,7 +88,7 @@ if(isset($_POST['formsuppression'])){
         $tab_to_json_id = json_encode((array)$tabid);
         $tab_to_json_nom = json_encode((array)$tabnom);
         ?>
-        
+
         <script type="text/javascript">
             var tabid_php = <?php echo $tab_to_json_id ?>;
             var tabnom_php = <?php echo $tab_to_json_nom ?>;
