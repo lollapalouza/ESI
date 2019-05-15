@@ -1,0 +1,37 @@
+footer {
+    margin-top : 2%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#conteneur_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.FooterPartieGauche img{
+    max-height: 5%;
+    max-width: 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 3%;
+}
+
+.FooterPartieDroite {
+    margin-right: 3%;
+    color: #000000;
+    font-family: "Segoe UI";
+}
+
+.BarreFooter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0160A2;
+    padding-top: 0.5%;
+    max-width: 100%;
+}

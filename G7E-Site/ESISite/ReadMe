@@ -1,0 +1,348 @@
+ReadMe :
+    - lien pour acceder au site : http://localhost/G7E-Site/ESISite/index.php
+    - Ne jamais commit le workspace.xml
+    - En se connectant : pull
+    - pull --> commit --> push
+
+
+
+
+
+    <?php
+    /** page d'accueil */
+    $EtatMaison = "Tout va bien dans votre maison !"
+
+    ?>
+
+    <!doctype html>
+    <html>
+    <head>
+        <!-- Liens utiles pour les logos -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="vue/CSS/css.accueil.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+        <!-- Titre de la page -->
+        <title>ESI - Bienvenue <?php echo $_SESSION['pseudo']?></title>
+
+    </head>
+    <body>
+
+    <!-- Bienvenue en haut de la page -->
+    <div class="w3-container">
+        <div class="w3-xlarge w3-text-orange">
+            Bienvenue !
+        </div>
+    </div>
+
+    <!-- Premiere ligne de bloc = horizontalement-->
+    <div id="PremiereLigne">
+            <a href="index.php?cible=capteur&fonction=gestion.piece">
+                <div class="GestionDesPieces">
+                    <br>
+                    <!-- Logo "engrenage" dans "Gestion des pièces" -->
+                    <div class="w3-padding w3-xlarge">
+                        <i class="fa fa-gear" style="font-size:40px;color:orange"></i>
+                    </div>
+                    Gestion des Pièces
+                </div>
+            <a/>
+        <div class="EtatMaison">
+            <!-- Logo "home" dans "Etat de la Maison" -->
+            <div class="LogoHome"><br>
+                    <i class="fa fa-home" style="font-size:40px;color:orange"></i>
+                <br>
+            </div>
+
+            <!-- Etat de la maison sous forme de variable,
+            afin de modifier l'affichage en cas de problème -->
+            <?php echo $EtatMaison ?>
+
+            <br>
+            <!-- Logo CHECK -->
+            <i class="fa fa-check-circle" style="font-size:38px; color=orange;"></i>
+
+        </div>
+        <a href="index.php?cible=packs&fonction=pack">
+            <div class="Pack">
+                <br>
+                <!-- Logo PACK -->
+                <div class="w3-padding w3-xlarge">
+                    <i class="fa fa-file-text" style="font-size:38px;color:orange"></i>
+                </div>
+                Votre pack
+            </div>
+        </a>
+    </div>
+
+
+    <!-- Deuxieme ligne de bloc = horizontalement-->
+    <div id="DeuxiemeLigne">
+        <div class="GestionDesActionneurs">
+            <br>
+            <div class="w3-padding w3-xlarge">
+                <i class="fa fa-wrench" style="font-size:35px;color:orange"></i>
+            </div>
+            Gestion des actionneurs
+        </div>
+
+
+        <div class="ChoixMaison">
+            <br>
+            <!-- Logo GLOBE -->
+            <i class="fa fa-globe" style="font-size:38px;color:orange"></i>
+            <br /><br />
+            <div class="bloc">
+                <!-- Menu déroulant -->
+                <select class="select" name="type" id="type">
+                    <option value="Maison1"> Maison 1</option>
+                    <option value="Maison2"> Maison 2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="DateEtHeure">
+            <!-- Logo CALENDRIER -->
+            <div class="ConteneurLogoCalendrier"> <br>
+                <i class="fa fa-calendar" style="font-size:35px;color:orange"></i>
+            </div>
+            <!-- HORLOGE -->
+            <span id="Paris_z71f" style="font-size:15px"></span>
+            <script src="//widget.time.is/fr.js"></script>
+            <script>
+                time_is_widget.init({Paris_z71f:{template:"DATE<br>TIME" +
+                            "<br>" +
+                            "SUN", time_format:"hours:minutes", date_format:"dayname dnum monthname year",
+                            sun_format:"Lever du soleil: srhour:srminute <br> Coucher du soleil: sshour:ssminute<br>",
+                            coords:"48.8534100,2.3488000"}});
+            </script>
+        </div>
+
+    </div>
+
+    <!-- Troisieme ligne de bloc = horizontalement-->
+    <div id="TroisiemeLigne">
+        <div class="Tutoriel">
+            <br>
+            <!-- Logo TUTORIEL -->
+            <div class="w3-padding w3-xlarge">
+                <i class="fa fa-toggle-right" style="font-size:48px;color:orange"></i>
+            </div>
+            Tutoriel du site
+        </div>
+        <div class="Temperature">
+            <br>
+            <!-- Logo TEMPERATURE -->
+            <div class="w3-padding w3-xlarge">
+                <i class='fas fa-temperature-high' style='font-size:40px;color:orange'></i>
+            </div>
+            Température
+        </div>
+        <div class="Scenes">
+            <br>
+            <!-- Logo SCENES -->
+            <div class="w3-padding w3-xlarge">
+                <i class="fa fa-film" style="font-size:38px;color:orange"></i>
+            </div>
+            Scènes
+        </div>
+    </div>
+    </body>
+    </html>
+    <!--<map name="Liens" id="Liens">
+        <area shape="rect" coords="20,10,1000,500" href="pack.php" alt="PACK" />
+    </map>
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    body{
+        background-image: url("../image/ImageBase.jpg");
+        background-size : cover;
+    }
+
+    #PremiereLigne
+    {
+        display : flex;
+        width : 100%;
+        height : 160px;
+        /*border : 2px solid red;*/
+        flex-wrap : wrap;
+        text-align: center;
+        justify-content: space-around;
+        align-content : center;
+        margin-top: 2%;
+        font-family: "Segoe UI";
+        font-size: large;
+
+    }
+
+    .GestionDesPieces{
+        color : black;
+        font-weight: bold;
+        background-color : #0160A2;
+        height : 100%;
+        width : 243px;
+        border-radius : 10px;
+    }
+
+    .EtatMaison {
+        color : black;
+        font-weight: bold;
+        background-color : floralwhite;
+        height: 100%;
+        width: 243px;
+        border-radius : 10px;
+    }
+    .Pack {
+        color: black;
+        font-weight: bold;
+        background-color: #0160A2;
+        height: 100%;
+        width: 243px;
+        border-radius : 10px;
+    }
+
+
+
+    #DeuxiemeLigne
+    {
+        display : flex;
+
+        width : 100%;
+        height : 160px;
+        /*border : 2px solid yellow;*/
+        flex-wrap : wrap;
+        text-align: center;
+        justify-content: space-around;
+        align-content : center;
+        margin-top: 2%;
+        font-family: "Segoe UI";
+        font-size: large;
+    }
+    .GestionDesActionneurs {
+        color: black;
+        font-weight: bold;
+        background-color: #0160A2;
+        height: 100%;
+        width: 16%;
+        border-radius : 10px;
+    }
+    .ChoixMaison {
+        color : black;
+        font-weight: bold;
+        background-color : floralwhite;
+        height: 100%;
+        width: 16%;
+        border-radius : 10px;
+    }
+    .DateEtHeure {
+        color: black;
+        font-weight: bold;
+        font-size: medium;
+        background-color: #0160A2;
+        height: 100%;
+        width: 16%;
+        border-radius : 10px;
+    }
+
+
+
+
+    #TroisiemeLigne
+    {
+        display : flex;
+        width : 100%;
+        height : 160px;
+        /*border : 2px solid green;*/
+        flex-wrap : wrap;
+        text-align: center;
+        justify-content: space-around;
+        align-content : center;
+        margin-top: 2%;
+        font-family: "Segoe UI";
+        font-size: large;
+    }
+    .Tutoriel{
+        color : black;
+        font-weight: bold;
+        background-color : #0160A2;
+        height : 100%;
+        width : 16%;
+        border-radius : 10px;
+    }
+    .Temperature {
+        color : black;
+        font-weight: bold;
+        background-color : floralwhite;
+        height: 100%;
+        width: 16%;
+        border-radius : 10px;
+    }
+    .Scenes {
+        color: black;
+        font-weight: bold;
+        background-color: #0160A2;
+        height: 100%;
+        width: 16%;
+        border-radius : 10px;
+    }
+
+    .bloc{
+        font-family: "Segoe UI";
+        font-size: 1.2em;
+        color:white;
+    }
+
+    /* Coloration en doré au survol des cases avec la souris*/
+    .GestionDesPieces:hover, .EtatMaison:hover,  .Pack:hover, .GestionDesActionneurs:hover, .Tutoriel:hover,
+    .ChoixMaison:hover, .DateEtHeure:hover, .Temperature:hover, .Scenes:hover{
+        background-color: gold;
+        /*box-shadow: 3px 3px 10px orange;*/
+    }
+    .a{
+        display : block;
+    }
+
+    .select{
+        border: none;
+        border-bottom: 2px solid #0160A2;
+        background-color: unset;
+    }
+
+
+
+
+
+
+

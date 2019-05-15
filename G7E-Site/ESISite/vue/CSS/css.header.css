@@ -1,0 +1,43 @@
+header {
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#conteneur_header{
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.HeaderPartieGauche img{
+    max-height: 5%;
+    max-width: 5%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-left: 3%;
+}
+
+.Menu{
+    margin-top: 0%;
+    margin-bottom: 2%;
+    margin-right: 3%;
+    color: white;
+    font-family: "Segoe UI";
+    width: 50%;
+    height:65%;
+    font-weight: bold;
+}
+
+.BarreHeader{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin-top: 2%;
+    background-color: white;
+}

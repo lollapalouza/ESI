@@ -1,0 +1,42 @@
+body {
+    background-image: url("../image/ImageBase.jpg");
+    background-size: cover;
+}
+
+
+
+    #nav
+    {
+        aline-item: center;
+        justify-content: center;
+    }
+
+    #nav li
+    {
+        display:inline;
+        padding:0;
+        margin:0;
+    }
+
+    #nav a:link,#nav a:visited
+    {
+        text-decoration:none;
+        font:bold 1em/1em "Segoe UI" ;
+        color:#ffffff;
+        background:#8eca78ff;
+        padding:20px 40px 4px 10px;
+        float:left;
+        width:auto;
+        border:1px solid #6c9b5cff;
+    }
+
+    #nav a:hover
+    {
+        color:#fff;
+        background:#b3ff97;
+    }
+
+    #nav a:active
+    {
+        background:#6c9b5cff;
+    }

@@ -1,0 +1,47 @@
+#footer{
+    font-family: "Segoe UI";
+    position: relative;
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+    background: #1D1D1D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteneur_principal{
+    display: flex;
+    width: 1300px;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.colonne{
+    width: 200px;
+}
+
+h4{
+    margin-top: 0;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    color: white;
+}
+
+.information{
+    color: white;
+    font-size: 15px;
+    justify-content: left;
+}
+
+.information a{
+    text-decoration: none;
+    color: #797C80;
+}
+.information a:hover{
+    text-decoration: underline;
+}
+
+.non_selectionne{
+    color: #797C80;
+}

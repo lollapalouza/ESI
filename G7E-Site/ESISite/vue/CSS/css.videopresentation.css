@@ -1,0 +1,24 @@
+body{
+    background-image: url("../image/ImageHorsConnexion.jpg");
+    background-size: cover;
+}
+
+h1{
+    color:#beb7bc;
+    font-family: "Segoe UI";
+}
+.grandbloc {
+    font-size: 20px;
+    color: #beb7bc;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.petitbloc:nth-child(2){
+    margin-top: 40px;
+    transform: scale(1.2);
+}
+

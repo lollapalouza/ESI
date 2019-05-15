@@ -1,0 +1,98 @@
+body{
+    background-image: url("../image/ImageHorsConnexion.jpg");
+    background-size: cover;
+}
+
+.conteneur_total{
+    font-family: "Segoe UI";
+    color: #ff820b;
+    font-size: 30px;
+}
+
+.conteneur_interne{
+    position: relative;
+    height: 850px;
+    display: flex;
+}
+
+.conteneur_gauche{
+    background: rgba(29,29,29,0.9);
+    height: 700px;
+    width: 300px;
+}
+
+.conteneur_droit{
+    height: 800px;
+    width: 100%;
+}
+
+.conteneur_droit_interne{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-around;
+    height: 720px;
+}
+
+p{
+    color: #0160A2;
+}
+
+.form{
+    transform: scale(1.3);
+    font-family: "Segoe UI", Serif;
+    color: #d7dfff;
+    border: unset;
+    border-radius: 2px;
+    background: unset;
+}
+
+.form:hover{
+    color: #0160A2;
+}
+
+.style_saisie{
+    color: white;
+    transform: scale(1.2);
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid #d7dfff;
+}
+
+.bloc_maison{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #797C80;
+    background-color: #1D1D1D;
+    margin-top: 10px;
+    border: 1px solid #797C80;
+    height: 200px;
+    width: 350px;
+
+}
+
+.style_saisie2{
+    font-size: 18px;
+    position: relative;
+    height: 30px;
+    width: 500px;
+    color: white;
+    transform: scale(1.2);
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid #d7dfff;
+}
+
+.form2{
+    transform: scale(1.5);
+    font-family: "Segoe UI", Serif;
+    color: #d7dfff;
+    border: unset;
+    border-radius: 2px;
+    background: unset;
+}
+
+.form2:hover{
+    color: #0160A2;
+}

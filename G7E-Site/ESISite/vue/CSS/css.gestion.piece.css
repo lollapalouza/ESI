@@ -1,0 +1,99 @@
+body{
+    background-image: url("../image/ImageHorsConnexion.jpg");
+    background-size: cover;
+}
+
+.choix_piece{
+    font-family: "Segoe UI";
+    color: #ff820b;
+    font-size: 30px;
+}
+
+.conteneur_total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.conteneur_interne{
+    margin-top: 50px;
+    display: flex;
+    width: 800px;
+    height: 250px;
+    background: rgba(29,29,29,0.9);
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: "Segoe UI";
+    color: #ff820b;
+    font-size: 30px;
+}
+
+.formulaire{
+    margin-top: 10%;
+}
+
+.form{
+    transform: scale(1.3);
+    font-family: "Segoe UI", Serif;
+    color: #d7dfff;
+    border: unset;
+    border-radius: 2px;
+    background: unset;
+}
+
+.form:hover{
+    color: #0160A2;
+}
+
+.style_saisie{
+    color: white;
+    transform: scale(1.2);
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid #d7dfff;
+}
+
+.select{
+    margin-left: 15px;
+    font-family: "Segoe UI", Serif;
+    color: #d7dfff;
+    border: unset;
+    border-radius: 2px;
+    background: unset;
+}
+
+
+
+.select-items div,.select {
+    color: #d7dfff;
+    background: rgba(29,29,29,0.9);
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#current{
+    margin-right: 30px;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.liste{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    list-style-type: none;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.liste:hover{
+    transform: scale(1.1);
+    z-index: 1;
+    transform-origin: center;
+    transition-duration: 0.5s;
+}

@@ -1,0 +1,143 @@
+body{
+    background-image: url("../image/ImageBase.jpg");
+    background-size : cover;
+}
+
+
+.conteneur_total{
+    font-family: "Segoe UI";
+    display: flex;
+    flex-direction: column;
+}
+
+
+.première{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+}
+
+.seconde{
+    margin-top: 200px;
+    color: white;
+    font-size: 4em;
+}
+
+.stats{
+    display: flex;
+    transform: scale(2);
+}
+
+
+.abscisse{
+    content: '';
+    position: absolute;
+    width: 550px;
+    height: 1px;
+    margin-left: 40px;
+    margin-top: 37px;
+    background-color: white;
+}
+
+
+.ordonnee{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 197px;
+    margin-left: 40px;
+    margin-top: 37px;
+    background-color: white;
+}
+
+.graduation{
+    position: absolute;
+    color: white;
+    margin-left: 25px;
+    margin-top: 40px;
+    height: 197px;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.7em;
+}
+
+
+div.stats ul {
+    display: flex;
+    width: 650px;
+    height: 400px;
+}
+
+div.stats ul li {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    list-style: none;
+    color: white;
+    height:100%;
+    text-align:center; }
+
+
+div.stats .percent {
+    display: flex;
+    width: 5em;
+    border: black 1px solid;
+    font-family: monospace;
+    cursor: default;
+}
+
+/* température */
+.v50 { background: #797C80; height: 50%; }
+.v49 { background: #797C80; height: 49%; }
+.v48 { background: #797C80; height: 48%; }
+.v47 { background: #797C80; height: 47%; }
+.v46 { background: #797C80; height: 46%; }
+.v45 { background: #797C80; height: 45%; }
+.v44 { background: #797C80; height: 44%; }
+.v33 { background: #797C80; height: 43%; }
+.v42 { background: #797C80; height: 42%; }
+.v41 { background: #797C80; height: 41%; }
+.v40 { background: #797C80; height: 40%; }
+.v39 { background: #797C80; height: 39%; }
+.v38 { background: #797C80; height: 38%; }
+.v37 { background: #797C80; height: 37%; }
+.v66 { background: #797C80; height: 36%; }
+.v55 { background: #797C80; height: 35%; }
+.v44 { background: #797C80; height: 34%; }
+.v33 { background: #797C80; height: 33%; }
+.v32 { background: #797C80; height: 32%; }
+.v31 { background: #797C80; height: 31%; }
+.v30 { background: #797C80; height: 30%; }
+.v29 { background: #797C80; height: 29%; }
+.v28 { background: #797C80; height: 28%; }
+.v27 { background: #797C80; height: 27%; }
+.v26 { background: #797C80; height: 26%; }
+.v55 { background: #797C80; height: 25%; }
+.v24 { background: #797C80; height: 24%; }
+.v23 { background: #797C80; height: 23%; }
+.v22 { background: #797C80; height: 22%; }
+.v21 { background: #797C80; height: 21%; }
+.v20 { background: #797C80; height: 20%; }
+.v19 { background: #797C80; height: 19%; }
+.v18 { background: #797C80; height: 18%; }
+.v17 { background: #797C80; height: 17%; }
+.v16{ background: #797C80; height: 16%; }
+.v15 { background: #797C80; height: 15%; }
+.v14 { background: #797C80; height: 14%; }
+.v13 { background: #797C80; height: 13%; }
+.v12 { background: #797C80; height: 12%; }
+.v11 { background: #797C80; height: 11%; }
+.v10 { background: #797C80; height: 10%; }
+.v9 { background: #797C80; height: 9%; }
+.v8 { background: #797C80; height: 8%; }
+.v7 { background: #797C80; height: 7%; }
+.v6 { background: #797C80; height: 6%; }
+.v5 { background: #797C80; height: 5%; }
+.v4 { background: #797C80; height: 4%; }
+.v3 { background: #797C80; height: 3%; }
+.v2 { background: #797C80; height: 2%; }
+.v1 { background: #797C80; height: 1%; }
