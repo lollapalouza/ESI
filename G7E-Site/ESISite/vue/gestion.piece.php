@@ -2,7 +2,7 @@
 /**
  * Vue : gérer le choix pièces (ajouter/supprimer)
  */
-include('modeles/requete.capteur.php');
+include('modeles/requete.maison.php');
 
 
 $idMaison =  $_SESSION['ID_maison'];
@@ -88,6 +88,7 @@ if(isset($_POST['formsuppression'])){
         $tab_to_json_id = json_encode((array)$tabid);
         $tab_to_json_nom = json_encode((array)$tabnom);
         ?>
+        
         <script type="text/javascript">
             var tabid_php = <?php echo $tab_to_json_id ?>;
             var tabnom_php = <?php echo $tab_to_json_nom ?>;
@@ -111,11 +112,14 @@ if(isset($_POST['formsuppression'])){
                      y = 255;
                      z = 255;
                 }
+
                 newLI.style.width =  Math.random()*100 + 100 + "px";
                 newLI.style.color = "rgb(" + x + "," + y + "," + z + ")";
                 newLI.style.fontFamily = "Segoe UI";
                 newLI.style.fontSize = 25 + "px";
                 newLI.style.background = "rgb(" + xcolor + "," + ycolor + "," + zcolor + ")";
+                newLI.style.cursor = "pointer";
+
                 newLI.className = "liste";
                 newLI.id = tabid_php[i];
                 newLI.innerHTML = nom;

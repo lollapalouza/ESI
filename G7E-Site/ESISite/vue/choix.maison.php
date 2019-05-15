@@ -2,7 +2,7 @@
 /**
  * Vue : Choix de la maison
  */
-include('modeles/requete.capteur.php');
+include('modeles/requete.maison.php');
 
 $idutilisateur =  $_SESSION['id'];
 $choix_maison = "";

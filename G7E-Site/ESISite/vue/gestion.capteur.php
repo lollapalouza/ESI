@@ -1,6 +1,6 @@
 <?php
 /**
- * Vue : affichages des différents packs disponible et de la gestion de l'abonnement à celui-ci
+ * Page pour AJAX de gestionpiece
  */
 ?>
 
