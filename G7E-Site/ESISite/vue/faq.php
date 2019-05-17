@@ -61,20 +61,36 @@
 
 <div class="faq_container">
     <div class="faq">
-        <div class="faq_question">QUESTION 1</div>
+        <div class="faq_question">J'ai oublié mon mot de passe...que faire ?</div>
         <div class="faq_answer_container">
-            <div class="faq_answer">REPONSE 1 </div>
+            <div class="faq_answer"> REPONSE 1</div>
         </div>
 
-        <div class="faq_question">QUESTION 2</div>
+        <div class="faq_question">Puis-je modifier mon mot de passe ?</div>
         <div class="faq_answer_container">
-            <div class="faq_answer">REPONSE 2 </div>
+            <div class="faq_answer" style="font-size:20px;" >Oui ! Pour cela, il faut accéder au profil utilisateur
+                (passez la souris sur votre pseudo en haut à droite de l'écran),
+                puis suivez les instructions en écrivant votre nouveau mot
+                de passe. Nous vous conseillons de choisir un mot de passe
+                sécurisé, avec des majuscules et des chiffres. Évitez votre date
+                de naissance et votre nom de famille.</div>
         </div>
 
-        <div class="faq_question">QUESTION 3</div>
+        <div class="faq_question">Comment ajouter un capteur ?</div>
         <div class="faq_answer_container">
-            <div class="faq_answer">REPONSE 3 </div>
+            <div class="faq_answer">Pour ajouter un capteur, rendez-vous sur la page "Gestion des pièces",
+                puis sélectionner la pièce correspondante. Enfin, cliquez sur "+"
+                et laissez vous guider.</div>
         </div>
+
+
+        <div class="faq_question">Je souhaite obtenir des conseils concernant l'architecture de mes capteurs.
+            Comment dois-je m'y prendre ?</div>
+        <div class="faq_answer_container">
+            <div class="faq_answer">En bas de la page se trouve un lien "Nous contacter" qui sert à nous envoyer un mail.
+                Nous serons ravis de vous répondre dans les plus brefs délais.</div>
+        </div>
+
     </div>
 </div>
 <!--
