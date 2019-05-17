@@ -21,9 +21,7 @@ switch ($function){
     case 'temperature':
         $vue = "temperature";
         break;
-    case 'capteur' :
-        $vue = "gestion.capteur";
-        break;
+
 }
 
 

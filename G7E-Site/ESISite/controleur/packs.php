@@ -3,6 +3,7 @@
  * Contrôleur des packs : gère l'achet et la consultation des packs
  */
 
+
 if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
     $function = "accueil";
 } else {
