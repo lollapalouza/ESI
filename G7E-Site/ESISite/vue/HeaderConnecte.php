@@ -30,7 +30,7 @@ if(isset($_POST['formdeconnexion'])){
                         <div class="nom"><?php echo $_SESSION['pseudo']?></div>
                         <ul>
                             <li><a href="index.php?cible=utilisateur&fonction=changerprofil">Profil</a></li>
-                            <li><a href="#">Item 1</a></li>
+                            <!--<li><a href="#">Item 1</a></li>-->
                             <li><input class="formHeader" type="submit" name="formdeconnexion" value="Déconnexion" /></li>
                         </ul>
                     </section>

@@ -13,12 +13,12 @@ function bdd() {
 <?php
 
 function changerpseudo($pseudo,$id)
-    {
-        $bdd=bdd();
-        $ajout= $bdd -> prepare('UPDATE utilisateur SET Pseudo=? WHERE id=?');
-        $ajout->execute(array($pseudo,$id));
+{
+    $bdd=bdd();
+    $ajout= $bdd -> prepare('UPDATE utilisateur SET Pseudo=? WHERE id=?');
+    $ajout->execute(array($pseudo,$id));
 
-    }
+}
 
 function changerprénom($prenom,$id)
 {
@@ -52,39 +52,55 @@ function changernuméro ($num,$id)
 
 }
 
-if (isset($_POST['pseudo'])){
-    if ($_POST['pseudo'] != NULL) {
-        $id = $_POST['inc'];
-        echo $id;
-        $pseudo = $_POST['pseudo'];
-        echo $pseudo;
-        changerpseudo($pseudo, $id);
+
+if(sha1($_POST['mot_de_passe'])==$_POST['mdp']){
+    if (isset($_POST['pseudo'])){
+        if ($_POST['pseudo'] != NULL) {
+            $id = $_POST['inc'];
+            $pseudo = $_POST['pseudo'];
+            changerpseudo($pseudo, $id);
+        }
     }
-}
-if (isset($_POST['nom'])){
-    if ($_POST['nom'] != NULL) {
-        $id = $_POST['inc'];
-        echo $id;
-        $nom = $_POST['nom'];
-        changernom($nom, $id);
+    if (isset($_POST['nom'])){
+        if ($_POST['nom'] != NULL) {
+            $id = $_POST['inc'];
+            $nom = $_POST['nom'];
+            changernom($nom, $id);
+        }
     }
-}
-if (isset($_POST['prenom'])){
-    if ($_POST['prenom'] != NULL) {
-        $id = $_POST['inc'];
-        echo $id;
-        $prenom = $_POST['prenom'];
-        changerprénom($prenom, $id);
+    if (isset($_POST['prenom'])){
+        if ($_POST['prenom'] != NULL) {
+            $id = $_POST['inc'];
+            $prenom = $_POST['prenom'];
+            changerprénom($prenom, $id);
+        }
+    }
+
+
+    if (isset($_POST['telephone'])){
+        if ($_POST['telephone'] != NULL) {
+            $id = $_POST['inc'];
+            $telephone = $_POST['telephone'];
+            changernuméro($telephone, $id);
+        }
+    }
+
+    if (isset($_POST['new_mot_de_passe'])){
+        if ($_POST['new_mot_de_passe'] != NULL) {
+            if ( $_POST['new_mot_de_passe']==$_POST['new_confirmation_mot_de_passe'])
+            {
+                $id = $_POST['inc'];
+                $oldmdp = sha1($_POST['new_mot_de_passe']);
+                changermdp($oldmdp, $id);
+            }
+        }
     }
 }
 
+header('Location: /g7e-site/ESISite/index.php?cible=utilisateur&fonction=AccueilHorsConnexion');
+exit();
 
-if (isset($_POST['telephone'])){
-    if ($_POST['telephone'] != NULL) {
-        $id = $_POST['inc'];
-        echo $id;
-        $telephone = $_POST['telephone'];
-        changernuméro($telephone, $id);
-    }
-}
+
+
+
 ?>
