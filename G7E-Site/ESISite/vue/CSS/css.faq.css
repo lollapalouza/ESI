@@ -1,6 +1,6 @@
 body{
-   background-image: url("../image/ImageHorsConnexion.jpg");
-   background-size: cover;
+    background-image: url("../image/ImageHorsConnexion.jpg");
+    background-size: cover;
 }
 
 
@@ -43,9 +43,9 @@ body{
 
 .faq_question {
     color : cornflowerblue;
-    margin: 0px;
+    margin: 5px;
     font-size: larger;
-    padding: 0px 0px 5px 0px;
+    padding: 4px 0px 4px 8px;
     display: inline-block;
     cursor: pointer;
     font-weight: bold;
@@ -53,7 +53,7 @@ body{
     border: 1px solid #333;
     box-shadow: 8px 8px 5px #444;
     background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
- }
+}
 
 .faq_answer_container {
     color : #ffffff;
@@ -63,4 +63,8 @@ body{
     height: 0px;
     overflow: hidden;
     padding: 0px;
+}
+
+.faq_answer{
+    height : 80px;
 }

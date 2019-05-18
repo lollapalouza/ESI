@@ -6,7 +6,8 @@
 ?>
 
 <!doctype html>
-<html xmlns:align="http://www.w3.org/1999/xhtml">
+<!-- <html xmlns:align="http://www.w3.org/1999/xhtml"> -->
+<html align="center">
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +17,8 @@
 <body>
 
 <div class = "BlocEcritureQuestion">
-    <table>
-        <tr>
+    <table align="center">
+        <tr >
             <td><br>
                 Si votre question ne figure pas parmi les propositions ci-dessous, vous pouvez
                 l'écrire ici, un membre de l'équipe support vous répondra dans les plus brefs délais :
@@ -61,10 +62,6 @@
 
 <div class="faq_container">
     <div class="faq">
-        <div class="faq_question">J'ai oublié mon mot de passe...que faire ?</div>
-        <div class="faq_answer_container">
-            <div class="faq_answer"> REPONSE 1</div>
-        </div>
 
         <div class="faq_question">Puis-je modifier mon mot de passe ?</div>
         <div class="faq_answer_container">
@@ -74,6 +71,12 @@
                 de passe. Nous vous conseillons de choisir un mot de passe
                 sécurisé, avec des majuscules et des chiffres. Évitez votre date
                 de naissance et votre nom de famille.</div>
+        </div>
+
+        <div class="faq_question">Je souhaite rendre ma maison connectée grâce à votre système, comment faire ?</div>
+        <div class="faq_answer_container">
+            <div class="faq_answer">Pour cela, il faut ajouter sa maison au site en remplissant les critères dans "Choix de la maison".
+                Ensuite, gérez votre maison dans "Gestion des Pièces". Nous vous recontacterons dans les plus brefs délais pour concrétiser votre projet !</div>
         </div>
 
         <div class="faq_question">Comment ajouter un capteur ?</div>
@@ -90,6 +93,15 @@
             <div class="faq_answer">En bas de la page se trouve un lien "Nous contacter" qui sert à nous envoyer un mail.
                 Nous serons ravis de vous répondre dans les plus brefs délais.</div>
         </div>
+
+        <div class="faq_question">J'ai plusieurs logements et voudrais gérer indépendamment chacun d'entre eux. Est-ce possible ?</div>
+        <div class="faq_answer_container">
+            <div class="faq_answer">Bien sûr ! Vous pouvez choisir quelle maison gérer dans "Choix de la maison" et en
+                tapant le nom de la maison que vous voulez rendre active. Ensuite, gérer vos capteurs et actionneurs dans
+                le menu "Gestion des Pièces".</div>
+        </div>
+
+
 
     </div>
 </div>
