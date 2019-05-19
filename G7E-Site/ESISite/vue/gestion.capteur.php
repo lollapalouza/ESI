@@ -21,6 +21,7 @@ include('modeles/requete.capteur.php');
             return tab4;
         }
         function comparaison() {
+            document.getElementById('cacher').style.display = 'none';
             var select = document.getElementById("add");
             $('#add').empty();
             var type = document.getElementById('type');
@@ -39,39 +40,50 @@ include('modeles/requete.capteur.php');
 </head>
 <body>
 <div class="conteneur_interne">
-    <form method="POST" action="" align ="center">
-        <table>
-            <tr>
-                <td>
-                    <input name="formNom" type="text" placeholder="         nom du capteur" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <select class="select" name="type" id="type" onchange="comparaison()">
-                        <option value="capteur">Capteur</option>
-                        <option value="actionneur">Actionneur</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <select class="select" name="add" id="add">
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input name="formSerie" type="text" placeholder="            N° de série" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input name="form" type="submit"/>
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div class="conteneur_haut">
+        <ul id="capteurs">
+        </ul>
+    </div>
+    <div class="conteneur_bas">
+        <form method="POST" action="" align ="center">
+            <table>
+                <tr>
+                    <td>
+                        <input name="formNom" type="text" placeholder="         nom du capteur" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="select" name="type" id="type" onchange="comparaison()">
+                            <option value="" id="cacher">Selectionner</option>
+                            <option value="capteur">Capteur</option>
+                            <option value="actionneur">Actionneur</option>
+                        </select>
+                        <script language="JavaScript">
+                            document.getElementById('cacher').style.fontWeight = 'bold';
+                            document.getElementById('type').style.fontWeight = 'bold';
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="select" name="add" id="add">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="formSerie" type="text" placeholder="            N° de série" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="form" type="submit"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </div>
 </body>
 </html>

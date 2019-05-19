@@ -2,3 +2,24 @@ body{
     background-image: url("../image/ImageHorsConnexion.jpg");
     background-size: cover;
 }
+
+.conteneur_interne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteneur_bas{
+    margin-top: 50px;
+    display: flex;
+    width: 800px;
+    height: 250px;
+    background: rgba(29,29,29,0.9);
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: "Segoe UI";
+    color: #ff820b;
+    font-size: 30px;
+}
