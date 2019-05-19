@@ -125,7 +125,7 @@ if(isset($_POST['formsuppression'])){
                 newLI.innerHTML = nom;
                 newLI.addEventListener("click", function () {
                     var id_session = this.id;
-                    $.post("vue/JS/piece.php",{id_sess: id_session},function(){
+                    $.post("vue/Ajax/piece.php",{id_sess: id_session},function(){
                         document.location.href="index.php?cible=capteur&fonction=capteur"
                     })
                 });
@@ -145,7 +145,7 @@ if(isset($_POST['formsuppression'])){
                     </tr>
                     <tr>
                         <td>
-                            <input class="style_saisie" type="text" placeholder="          Superficie (cm)" name="superficie" id="superficie" value="<?php if(isset($superficie)) { echo $superficie; }?>">
+                            <input class="style_saisie" type="text" placeholder="          Superficie (cm²)" name="superficie" id="superficie" value="<?php if(isset($superficie)) { echo $superficie; }?>">
                         </td>
                     </tr>
                     <tr>
