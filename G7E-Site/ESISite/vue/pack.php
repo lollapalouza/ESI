@@ -69,6 +69,15 @@ du titre des bullets point et des logos checks-->
                 <i class="fa fa-check"></i>
             </div>
         </div>
+        <br>
+        <br>
+        <a href="index.php?cible=achats&fonction=achat&pack1">
+            <div class="Boutonachat1">
+                <div class="achat">
+                    Acheter : &#8364; 29,90
+                </div>
+            </div>
+        </a>
     </div>
 
 
@@ -115,9 +124,19 @@ du titre des bullets point et des logos checks-->
                 <i class="fa fa-check"></i>
             </div>
         </div>
-
-
+        <br>
+        <br>
+        <a href="index.php?cible=achats&fonction=achat&pack2">
+            <div class="Boutonachat3">
+                <div class="achat">
+                    Acheter : &#8364; 39,90
+                </div>
+            </div>
+        </a>
     </div>
+
+
+
     <div class="PackCamera">
         <br>
         <!-- Logo PACK -->
@@ -127,7 +146,7 @@ du titre des bullets point et des logos checks-->
         <br><br><br>
         <div class="memeligne">
             <div class="BulletPoint8"> <!-- div pour la couleur du texte-->
-                 Caméra activée en cas d'intrusion
+                Caméra activée en cas d'intrusion
             </div>
             <div class="check"> <!-- div pour la couleur du check-->
                 <i class="fa fa-check"></i>
@@ -161,6 +180,15 @@ du titre des bullets point et des logos checks-->
                 <i class="fa fa-check"></i>
             </div>
         </div>
+        <br>
+        <br>
+        <a href="index.php?cible=achats&fonction=achat&pack3">
+            <div class="Boutonachat3">
+                <div class="achat">
+                    Acheter : &#8364; 49,90
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 </body>

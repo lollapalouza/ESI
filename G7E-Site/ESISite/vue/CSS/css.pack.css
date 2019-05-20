@@ -80,6 +80,40 @@ body{
 .check{
     color : blue;
 }
+.Boutonachat1{
+    color : black;
+    font-weight: bold;
+    display: flex ;
+    align-content : center;
+    justify-content: center;
+    background-color : #0160A2;
+    height: 8%;
+    width: 60%;
+    margin-left: 18%;
+
+}
+.Boutonachat2{
+    color : black;
+    font-weight: bold;
+    display: flex ;
+    align-content : center;
+    justify-content: center;
+    background-color : #0160A2;
+    height: 8%;
+    width: 60%;
+    margin-left: 18%;
+}
+.Boutonachat3{
+    color : black;
+    font-weight: bold;
+    display: flex ;
+    align-content : center;
+    justify-content: center;
+    background-color : #0160A2;
+    height: 8%;
+    width: 60%;
+    margin-left: 18%;
+}
 .PackUrgence{
     color : black;
     font-weight: bold;
@@ -87,7 +121,6 @@ body{
     height : 100%;
     width : 27%;
 }
-
 .PackSecurite {
     color : black;
     font-weight: bold;
@@ -120,8 +153,6 @@ body{
     border-right: solid 3px white;
     transform: rotate(-135deg);
 }
-
-
 
 .PackUrgence:hover,.PackSecurite:hover,.PackCamera:hover{
     background-color: gold;
