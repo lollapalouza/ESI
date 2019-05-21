@@ -6,13 +6,12 @@ body{
 .BlocEcritureQuestion {
     font-size: 20px;
     font-family: "Segoe UI";
-    color: #0160A2;
+    color: #ff820b;
     text-align: center;
     background: rgba(29,29,29,0.9);
     border-radius: 5px;
     padding: 0px 0px 5px 0px;
     width: 100%;
-    box-shadow: 8px 8px 5px #444;
 }
 .EcritureQuestion, .Mail_utilisateur{
     text-align: center;
@@ -24,17 +23,38 @@ body{
     transform: scale(1.2);
     background-color: unset;
     border: none;
-    border-bottom: 1px solid cornflowerblue;
+    border-bottom: 1px solid #797C80;
 }
 
 .ValidationQuestion{
     transform: scale(1.5);
     font-family: "Segoe UI", Serif;
-    color : royalblue;
+    color : #797C80;
     border: unset;
     border-radius: 2px;
     background: unset;
 }
 .ValidationQuestion:hover{
     color : darkorange;
+}
+
+#questionreponse{
+    margin-left:0;
+    padding-left:0;
+}
+
+.question{
+    padding: 0;
+    margin: 0;
+    background: #1D1D1D;
+    color: #797C80;
+    list-style-type: none;
+}
+
+.reponse{
+    padding: 0;
+    background: #797C80;
+    color: #1D1D1D;
+    list-style-type: none;
+    margin-bottom: 5px;
 }
