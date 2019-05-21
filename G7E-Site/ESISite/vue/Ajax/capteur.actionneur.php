@@ -32,7 +32,6 @@ else{
 foreach ($data as $value){
     $tabnom[] = $value['Nom'];
 }
-
 $tabnom_json = json_encode((array) $tabnom);
 echo $tabnom_json;
 ?>

@@ -24,7 +24,9 @@ switch ($function){
     case 'capteur':
         $vue = "gestion.capteur";
         break;
-
+    case 'capteur.actionneur.regulation':
+        $vue = "capteur.actionneur.regulation";
+        break;
 }
 
 

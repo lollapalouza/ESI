@@ -76,22 +76,34 @@ if(isset($_POST['formSuppression'])){
 <body>
 <div class="conteneur_interne">
     <div class="conteneur_haut">
-        <ul id="capteurs">
-        </ul>
+        <div class="nom">
+            <div class="style">Capteurs</div>
+            <div class="style">Actionneurs</div>
+        </div>
+        <div class="liste">
+            <ul id="capteurs">
+            </ul>
+            <ul id="actionneurs">
+            </ul>
+        </div>
         <?php
         $occ = 0;
         $tabid = array();
         $tabnom = array();
+        $tabtype = array();
         $data2 = affiche_capteur_actionneur($bdd, $idpiece);
         foreach($data2 as $value){
             $tabid[] = $value["ID"];
             $tabnom[] = $value["Nom"];
+            $tabtype[] = $value["Type_"];
         }
+        $tab_to_json_type = json_encode((array)$tabtype);
         $tab_to_json_id = json_encode((array)$tabid);
         $tab_to_json_nom = json_encode((array)$tabnom);
         ?>
 
         <script type="text/javascript">
+            var tabtype_php = <?php echo $tab_to_json_type ?>;
             var tabid_php = <?php echo $tab_to_json_id ?>;
             var tabnom_php = <?php echo $tab_to_json_nom ?>;
 
@@ -101,17 +113,33 @@ if(isset($_POST['formSuppression'])){
                 newLI.style.fontFamily = "Segoe UI";
                 newLI.style.fontSize = 20 + "px";
                 newLI.style.cursor = "pointer";
-                newLI.className = "liste";
                 newLI.id = tabid_php[i];
                 newLI.innerHTML = nom;
-                /*newLI.addEventListener("click", function () {
+                newLI.className = tabtype_php[i];
+                newLI.addEventListener("click", function () {
                     var id_session = this.id;
-                    $.post("vue/Ajax/piece.php",{id_sess: id_session},function(){
-                        document.location.href="index.php?cible=capteur&fonction=capteur"
+                    $.post("vue/Ajax/capteur.actionneur.bis.php",{id_sess: id_session},function(){
+                        document.location.href="index.php?cible=capteur&fonction=capteur.actionneur.regulation"
                     })
                 });
-                */
-                document.getElementById('capteurs').appendChild(newLI);
+                if(tabtype_php[i] === "capteur"){
+                    newLI.style.background = "rgb("+29+","+29+","+29+")";
+                    newLI.style.color = "rgb("+1+","+96+","+162+")";
+                    newLI.style.border = 1+"px solid #FFFFFF";
+                    newLI.style.borderRadius = 5+"px";
+                    newLI.style.width = 197+"px";
+                    newLI.style.height = 100+"px";
+                    document.getElementById('capteurs').appendChild(newLI);
+                }
+                else{
+                    newLI.style.background = "rgb("+1+","+96+","+162+")";
+                    newLI.style.color = "rgb("+29+","+29+","+29+")";
+                    newLI.style.border = 1+"px solid #000000";
+                    newLI.style.borderRadius = 5+"px";
+                    newLI.style.width = 197+"px";
+                    newLI.style.height = 100+"px";
+                    document.getElementById('actionneurs').appendChild(newLI);
+                }
             }
         </script>
     </div>
@@ -126,7 +154,7 @@ if(isset($_POST['formSuppression'])){
                     </tr>
                     <tr>
                         <td>
-                            <input name="formNom" type="text" placeholder="         nom du capteur" />
+                            <input class="style_saisie" name="formNom" type="text" placeholder="         nom du capteur" />
                         </td>
                     </tr>
                     <tr>
@@ -150,12 +178,12 @@ if(isset($_POST['formSuppression'])){
                     </tr>
                     <tr>
                         <td>
-                            <input name="formSerie" type="text" placeholder="            N° de série" />
+                            <input class="style_saisie" name="formSerie" type="text" placeholder="            N° de série" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input name="form" type="submit"/>
+                            <input class="formsub" name="form" type="submit"/>
                         </td>
                     </tr>
                     <tr>
@@ -182,17 +210,17 @@ if(isset($_POST['formSuppression'])){
                     </tr>
                     <tr>
                         <td>
-                            <input name="formSuppression1" type="text" placeholder="            Supprimer" />
+                            <input class="style_saisie" name="formSuppression1" type="text" placeholder="            Supprimer" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input name="formSuppression2" type="text" placeholder="            Confirmation" />
+                            <input class="style_saisie" name="formSuppression2" type="text" placeholder="            Confirmation" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input name="formSuppression" type="submit"/>
+                            <input class="formsub" name="formSuppression" type="submit"/>
                         </td>
                     </tr>
                     <tr>

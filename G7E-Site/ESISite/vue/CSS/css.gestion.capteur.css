@@ -14,7 +14,7 @@ body{
     margin-top: 50px;
     display: flex;
     width: 800px;
-    height: 250px;
+    height: 260px;
     background: rgba(29,29,29,0.9);
     justify-content: space-around;
     border-radius: 5px;
@@ -22,4 +22,78 @@ body{
     font-family: "Segoe UI";
     color: #ff820b;
     font-size: 25px;
+}
+
+.nom{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.capteur{
+    font-family: "Segoe UI";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actionneur{
+    font-family: "Segoe UI";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#capteurs{
+    width: 602px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#actionneurs{
+    width: 602px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.liste{
+    display: flex;
+    width: 1300px;
+    justify-content: space-around;
+}
+
+.style{
+    font-size: 30px;
+    color: #ff820b;
+}
+
+.style_saisie{
+    color: white;
+    transform: scale(1.2);
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid #d7dfff;
+}
+
+.select{
+    margin-left: 15px;
+    font-family: "Segoe UI", Serif;
+    color: #d7dfff;
+    border: unset;
+    border-radius: 2px;
+    background: #1D1D1D;
+}
+
+.formsub{
+    transform: scale(1.3);
+    border: unset;
+    background: unset;
+    color: #d7dfff;
+}
+
+.formsub:hover{
+    color: rgb(1,97,162);
 }

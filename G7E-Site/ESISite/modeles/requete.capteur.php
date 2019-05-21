@@ -14,6 +14,13 @@ function affiche_capteur_actionneur(PDO $bdd, $idpiece){
     return $fin=$query->fetchall();
 }
 
+function affiche_capteur_actionneur_id(PDO $bdd, $id){
+    $query=$bdd->prepare('SELECT * FROM catalogue WHERE ID = :id');
+    $query->bindValue('id', $id, PDO::PARAM_STR);
+    $query->execute();
+    return $fin=$query->fetch();
+}
+
 function capteur_actionneur_supprimer(PDO $bdd, $idpiece, $nom){
     $query=$bdd->prepare('DELETE FROM catalogue WHERE idPiece = :id AND Nom = :nom');
     $query->bindValue(':id',$idpiece, PDO::PARAM_STR);
@@ -34,4 +41,6 @@ function rechercher_capteur_actionneur(PDO $bdd, $valeur){
     $query->execute();
     return $fin=$query->fetch();
 }
+
+
 ?>

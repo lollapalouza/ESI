@@ -1,0 +1,10 @@
+body{
+    background-image: url("../image/ImageBase.jpg");
+    background-size : cover;
+}
+
+.pres{
+    font-family: "Segoe UI";
+    color: #ff820b;
+    font-size: 30px;
+}
