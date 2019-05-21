@@ -3,7 +3,6 @@ body{
     background-size: cover;
 }
 
-
 .BlocEcritureQuestion {
     text-align: center;
     color : black;
@@ -14,8 +13,7 @@ body{
     box-shadow: 8px 8px 5px #444;
     background-image: linear-gradient(180deg, #fff, #ddd 5%, #ccc);
 }
-
-.EcritureQuestion{
+.EcritureQuestion, .Mail_utilisateur{
     text-align: center;
     font-size: 18px;
     position: relative;
@@ -25,46 +23,49 @@ body{
     transform: scale(1.2);
     background-color: unset;
     border: none;
-    border-bottom: 1px solid cornflowerblue;;
+    border-bottom: 1px solid cornflowerblue;
 }
 
 .ValidationQuestion{
     transform: scale(1.5);
     font-family: "Segoe UI", Serif;
-    color: cornflowerblue;
+    color : royalblue;
     border: unset;
     border-radius: 2px;
     background: unset;
 }
-
 .ValidationQuestion:hover{
-    color: #0160A2;
+    color : darkorange;
+}
+
+.faq_question:hover {
+    font-weight: bold;
+    box-shadow: 8px 8px 8px #444444;
 }
 
 .faq_question {
-    color : cornflowerblue;
-    margin: 5px;
-    font-size: larger;
-    padding: 4px 0px 4px 8px;
+    margin-top: 0px;
     display: inline-block;
     cursor: pointer;
-    font-weight: bold;
+    color : white;
+    font-size: larger;
+    padding: 4px 0px 4px 8px;
     width: 100%;
     border: 1px solid #333;
     box-shadow: 8px 8px 5px #444;
-    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    background-image: linear-gradient(180deg, darkgrey, #1D1D1D);
 }
 
 .faq_answer_container {
-    color : #ffffff;
-    margin: 10px;
-    font-size: larger;
-    padding: 0px 0px 5px 0px;
-    height: 0px;
+    display: none;
     overflow: hidden;
-    padding: 0px;
-}
-
-.faq_answer{
-    height : 80px;
+    color : black;
+    background: white;
+    font-family: "Segoe UI";
+    justify-content: center;
+    margin: 10px;
+    font-size: large;
+    padding: 0px 0px 5px 0px;
+    height: 50px;
+    width: 100%;
 }

@@ -32,38 +32,38 @@
                 </div>
             </div>
             <div class="colonne">
-                <h4 align="left">Contact</h4>
+                <h4 align="left">Nous contacter</h4>
                 <div class="information" align="left">
-                    <a href="#">FAQ ?</a>
+                    <a href="index.php?cible=tutoriel&fonction=FAQ">FAQ</a>
                     <br /><br />
                     <div>Réseaux sociaux</div>
                     <a href="https://www.facebook.com/anvi.maison.connectee/">Facebook</a>
-                    <br />
+                    <br/>
                     <a href="#">Twitter</a>
                     <br />
                     <a href="#">Instagram</a>
                     <br /><br />
-                    <div>Fixe:</div>
+                    <div>Fixe :</div>
                     <div class="non_selectionne">+33 (0)1 .. .. .. ..</div>
                     <br />
-                    <div>mail:</div>
+                    <div>Mail :</div>
                     <div class="non_selectionne">esi.mamaison@gmail.com</div>
                 </div>
             </div>
             <div class="colonne">
                 <h4 align="left">Contributeurs</h4>
                 <div class="information" align="left">
-                    <div class="non_selectionne">Tran Quang Sach Mathieu</div>
-                    <br />
-                    <div class="non_selectionne">Laurent Hubert</div>
-                    <br />
-                    <div class="non_selectionne">Jeannin Guillaume</div>
-                    <br />
-                    <div class="non_selectionne">Quassou Ali</div>
-                    <br />
-                    <div class="non_selectionne">Cicchelero Tony</div>
-                    <br />
-                    <div class="non_selectionne">Mithouard Alan</div>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/mathieu-tran-quang-sach-80304b170/">Tran Quang Sach Mathieu</a>
+                    <br><br>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/hubert-laurent/">Laurent Hubert</a>
+                    <br><br>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/guillaume-jeannin1/">Jeannin Guillaume</a>
+                    <br><br>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/ali-qassou-6710b016b/">Qassou Ali</a>
+                    <br><br>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/tony-cicchelero/">Cicchelero Tony</a>
+                    <br><br>
+                    <a class="non_selectionne" href="https://www.linkedin.com/in/alan-mithouard-892298171/">Mithouard Alan</a>
                 </div>
             </div>
         </div>
