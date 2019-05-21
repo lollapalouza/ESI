@@ -4,14 +4,15 @@ body{
 }
 
 .BlocEcritureQuestion {
+    font-size: 20px;
+    font-family: "Segoe UI";
+    color: #0160A2;
     text-align: center;
-    color : black;
-    font-weight: bold;
+    background: rgba(29,29,29,0.9);
+    border-radius: 5px;
     padding: 0px 0px 5px 0px;
     width: 100%;
-    border: 1px solid #333;
     box-shadow: 8px 8px 5px #444;
-    background-image: linear-gradient(180deg, #fff, #ddd 5%, #ccc);
 }
 .EcritureQuestion, .Mail_utilisateur{
     text-align: center;
@@ -36,36 +37,4 @@ body{
 }
 .ValidationQuestion:hover{
     color : darkorange;
-}
-
-.faq_question:hover {
-    font-weight: bold;
-    box-shadow: 8px 8px 8px #444444;
-}
-
-.faq_question {
-    margin-top: 0px;
-    display: inline-block;
-    cursor: pointer;
-    color : white;
-    font-size: larger;
-    padding: 4px 0px 4px 8px;
-    width: 100%;
-    border: 1px solid #333;
-    box-shadow: 8px 8px 5px #444;
-    background-image: linear-gradient(180deg, darkgrey, #1D1D1D);
-}
-
-.faq_answer_container {
-    display: none;
-    overflow: hidden;
-    color : black;
-    background: white;
-    font-family: "Segoe UI";
-    justify-content: center;
-    margin: 10px;
-    font-size: large;
-    padding: 0px 0px 5px 0px;
-    height: 50px;
-    width: 100%;
 }
