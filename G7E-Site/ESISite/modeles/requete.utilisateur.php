@@ -23,8 +23,10 @@ include("connexion.php");
  * @param $Etat_de_connexion
  * @return bool
  */
+
 function inserer_membre(PDO $bdd, $Prenom,$Nom,$Pseudo,$Mot_de_passe,$Adresse_mail,$Numero_de_telephone,$Etat_de_connexion){
-    $inserermembre = $bdd -> prepare("INSERT INTO utilisateur(Prénom,Nom,Pseudo,Mot_de_passe,Adresse_mail,Numero_de_telephone,Etat_de_connexion) VALUES (?,?,?,?,?,?,?)");
+    $inserermembre = $bdd -> prepare("INSERT INTO utilisateur(Prénom,Nom,Pseudo,Mot_de_passe,Adresse_mail,Numero_de_telephone,Etat_de_connexion)
+    VALUES (?,?,?,?,?,?,?)");
     return $inserermembre -> execute(array($Prenom,$Nom,$Pseudo,$Mot_de_passe,$Adresse_mail,$Numero_de_telephone,$Etat_de_connexion));
 }
 

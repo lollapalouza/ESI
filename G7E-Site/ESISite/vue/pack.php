@@ -71,7 +71,7 @@ du titre des bullets point et des logos checks-->
         </div>
         <br>
         <br>
-        <a href="index.php?cible=achats&fonction=achat&pack1">
+        <a href="index.php?cible=achats&fonction=achat&pack=29.90">
             <div class="Boutonachat1">
                 <div class="achat">
                     Acheter : &#8364; 29,90
@@ -126,7 +126,7 @@ du titre des bullets point et des logos checks-->
         </div>
         <br>
         <br>
-        <a href="index.php?cible=achats&fonction=achat&pack2">
+        <a href="index.php?cible=achats&fonction=achat&pack=39.90">
             <div class="Boutonachat3">
                 <div class="achat">
                     Acheter : &#8364; 39,90
@@ -182,7 +182,7 @@ du titre des bullets point et des logos checks-->
         </div>
         <br>
         <br>
-        <a href="index.php?cible=achats&fonction=achat&pack3">
+        <a href="index.php?cible=achats&fonction=achat&pack=49.90">
             <div class="Boutonachat3">
                 <div class="achat">
                     Acheter : &#8364; 49,90
