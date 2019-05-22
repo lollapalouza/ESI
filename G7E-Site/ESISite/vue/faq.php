@@ -119,10 +119,13 @@ if(isset($_POST['formvalidation']))
         var tabreponse_php = <?php echo $tab_to_json_reponse ?>;
         var tabid_php = <?php echo $tab_to_json_id ?>;
         var tabquestion_php = <?php echo $tab_to_json_question ?>;
+        var nb_de_question_reponse = tabid_php.length;
 
         for (var i=0; i< tabid_php.length; i++){
             var newquestion = document.createElement("LI");
             var newreponse = document.createElement("LI");
+            let id = tabid_php[i];
+
 
             var question = tabquestion_php[i];
             var reponse = tabreponse_php[i];
@@ -130,8 +133,17 @@ if(isset($_POST['formvalidation']))
             newquestion.innerHTML = question;
             newreponse.innerHTML = reponse;
 
-            newquestion.className = "question";
-            newreponse.className = "reponse";
+            newquestion.id = "question";
+            newreponse.id = tabid_php[i];
+            newreponse.className = "reponse"
+
+            newquestion.addEventListener("mouseover", function () {
+                document.getElementById(id).style.display = "block";
+            });
+
+            newquestion.addEventListener("mouseout", function () {
+                document.getElementById(id).style.display = "none";
+            });
 
             document.getElementById('questionreponse').appendChild(newquestion);
             document.getElementById('questionreponse').appendChild(newreponse);

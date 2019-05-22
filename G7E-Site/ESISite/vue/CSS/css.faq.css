@@ -43,18 +43,25 @@ body{
     padding-left:0;
 }
 
-.question{
+#question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     margin: 0;
+    height: 30px;
     background: #1D1D1D;
     color: #797C80;
     list-style-type: none;
 }
 
 .reponse{
+    display: none;
+    align-items: center;
     padding: 0;
     background: #797C80;
     color: #1D1D1D;
     list-style-type: none;
     margin-bottom: 5px;
+    height: 40px;
 }
