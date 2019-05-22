@@ -114,6 +114,7 @@ if(isset($_POST['formvalidation']))
     $tab_to_json_reponse = json_encode((array)$tabreponse);
     $tab_to_json_id = json_encode((array)$tabid);
     ?>
+
     <script type="text/javascript">
         var tabreponse_php = <?php echo $tab_to_json_reponse ?>;
         var tabid_php = <?php echo $tab_to_json_id ?>;

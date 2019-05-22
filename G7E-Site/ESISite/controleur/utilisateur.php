@@ -46,7 +46,7 @@ if($vue == 'pageconnexion' || $vue == 'inscription'){
 elseif ($vue == 'AccueilHorsConnexion'){
     include ('vue/headerconnexion.php');
     include ('vue/' . $vue . '.php');
-    include ('vue/footerconnexion.php');
+    include ('vue/footerHorsConnexion.php');
 }
 elseif ($vue=='changerprofil'){
     include ('vue/HeaderConnecte.php');
