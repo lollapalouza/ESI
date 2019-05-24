@@ -42,5 +42,17 @@ function rechercher_capteur_actionneur(PDO $bdd, $valeur){
     return $fin=$query->fetch();
 }
 
+function existe_capt(PDO $bdd, $id){
+    $query=$bdd->prepare('SELECT * FROM consigne WHERE IDcatalogue = :id');
+    $query->bindValue(':id',$id, PDO::PARAM_STR);
+    $query->execute();
+    return $fin=$query->fetchAll();
+}
 
+
+function inserer_consigne(PDO $bdd, $valeur, $debut, $fin, $envoye, $id)
+{
+    $inserer = $bdd->prepare("INSERT INTO consigne(Valeur, temps_début, temps_fin, Envoye, IDcatalogue) VALUES (?,?,?,?,?)");
+    return $inserer->execute(array($valeur, $debut, $fin, $envoye, $id));
+}
 ?>

@@ -7,6 +7,12 @@ $data = affiche_capteur_actionneur_id($bdd,$idModule);
 $nomModule = $data['Nom'];
 $typeModule = $data['Type_'];
 
+
+$data2 = existe_capt($bdd, $idModule);
+if (empty($data2)){
+    inserer_consigne($bdd, 1, 1, 1, "", $idModule);
+}
+
 ?>
 
 <!doctype html>
@@ -21,18 +27,13 @@ $typeModule = $data['Type_'];
 <body>
 <div class="pres">Vous avez choisi un : '<?php echo $typeModule?>' de nom : '<?php echo $nomModule ?>'</div>
 <div class="conteneur_interne">
+
+
+    <!--
     <label class="switch">
         <input type="checkbox">
         <span class="slider"></span>
-    </label>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
+    </label> -->
 </div>
 </body>
 
