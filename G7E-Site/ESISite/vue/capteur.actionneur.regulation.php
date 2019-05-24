@@ -13,7 +13,20 @@ if (empty($data2)){
     inserer_consigne($bdd, 1, 1, 1, "", $idModule);
 }
 
+
+if (isset($_POST['formactivation'])){
+    $type =  htmlspecialchars($_POST['type']);
+    if($type === "activer"){
+        $valeur = 1;
+    }
+    else{
+        $valeur = 0;
+    }
+    modifier_valeur($bdd, $valeur, $idModule);
+}
 ?>
+
+
 
 <!doctype html>
 
@@ -27,13 +40,35 @@ if (empty($data2)){
 <body>
 <div class="pres">Vous avez choisi un : '<?php echo $typeModule?>' de nom : '<?php echo $nomModule ?>'</div>
 <div class="conteneur_interne">
-
-
-    <!--
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label> -->
+    <?php
+        $data3 = recuperer_consigne($bdd, $idModule);
+        foreach ($data3 as $value) {
+            if($value['Valeur'] == 0){
+                $valeur = "désactiver";
+            }
+            else{
+                $valeur = "activer";
+            }
+        }
+    echo $valeur;
+    ?>
+    <form method="POST" action="">
+        <table>
+            <tr>
+                <td>
+                    <select class="select" name="type" id="type">
+                        <option value="activer">Activer</option>
+                        <option value="desactiver">Désactiver</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="formactivation" value="valider">
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
 </body>
 

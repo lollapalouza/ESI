@@ -55,4 +55,20 @@ function inserer_consigne(PDO $bdd, $valeur, $debut, $fin, $envoye, $id)
     $inserer = $bdd->prepare("INSERT INTO consigne(Valeur, temps_début, temps_fin, Envoye, IDcatalogue) VALUES (?,?,?,?,?)");
     return $inserer->execute(array($valeur, $debut, $fin, $envoye, $id));
 }
+
+
+function modifier_valeur(PDO $bdd, $valeur, $id){
+    $query=$bdd->prepare('UPDATE consigne SET Valeur = :valeur WHERE IDcatalogue = :id');
+    $query->bindValue(':id',$id, PDO::PARAM_STR);
+    $query->bindValue(':valeur',$valeur, PDO::PARAM_STR);
+    $query->execute();
+    return $fin=$query->fetchAll();
+}
+
+function recuperer_consigne(PDO $bdd, $id){
+    $query=$bdd->prepare('SELECT * FROM consigne WHERE IDcatalogue = :id');
+    $query->bindValue(':id',$id, PDO::PARAM_STR);
+    $query->execute();
+    return $fin=$query->fetchall();
+}
 ?>
