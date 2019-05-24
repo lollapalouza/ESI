@@ -44,13 +44,13 @@ if (isset($_POST['formactivation'])){
         $data3 = recuperer_consigne($bdd, $idModule);
         foreach ($data3 as $value) {
             if($value['Valeur'] == 0){
-                $valeur = "désactiver";
+                $val = "désactiver";
             }
             else{
-                $valeur = "activer";
+                $val = "activer";
             }
         }
-    echo $valeur;
+    echo $val;
     ?>
     <form method="POST" action="">
         <table>
