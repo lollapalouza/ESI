@@ -6,7 +6,7 @@ body{
 .BlocEcritureQuestion {
     font-size: 20px;
     font-family: "Segoe UI";
-    color: #ff820b;
+    color: #e2e2e2;
     text-align: center;
     background: rgba(29,29,29,0.9);
     border-radius: 5px;
@@ -34,46 +34,31 @@ body{
     background: unset;
 }
 .ValidationQuestion:hover {
-    color : darkorange;
+    color : #e2e2e2;
 }
 
-#questionreponse {
+#questionreponse{
     margin-left:0;
     padding-left:0;
 }
 
-.question:hover {
-    font-weight : bold;
-    box-shadow : 8px 8px 8px #444444;
-}
-.question {
-    margin: 5px;
-    font-size: larger;
-    padding: 4px 0px 4px 8px;
-    display: inline-block;
-    cursor: pointer;
-    color : white;
-    width: 100%;
-    border: 1px solid #333;
-    box-shadow: 8px 8px 5px #444;
-    background-image: linear-gradient(180deg, darkgrey, #1D1D1D);
+#question{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 40px;
     background: #1D1D1D;
+    color: #e2e2e2;
     list-style-type: none;
-    border-radius : 5px;
 }
 
-.reponse {
-    display: none;
-    overflow: hidden;
-    color : black;
-    background: white;
-    font-family: "Segoe UI";
-    justify-content: center;
-    margin: 10px;
-    font-size: large;
-    padding: 0px 0px 5px 0px;
-    background: #797C80;
+.reponse{
+    font-size: 17px;
+    padding: 0;
+    background: #1D1D1D;
+    color: #797C80;
     list-style-type: none;
-    margin-bottom: 5px;
-    border-radius : 5px;
+    height: 50px;
 }

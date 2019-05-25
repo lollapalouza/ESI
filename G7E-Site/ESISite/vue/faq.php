@@ -111,17 +111,16 @@ if(isset($_POST['formvalidation']))
     </table>
 </div>
 
-<div class="conteneur_faq open">
+<div class="conteneur_faq">
     <ul id="questionreponse">
     </ul>
 
-    <!-- Permet d'afficher directement les questions a partir de la BDD -->
     <?php
     $tabid = array();
     $tabquestion = array();
     $tabreponse = array();
     $data2 = recuperer_faq($bdd);
-    foreach($data2 as $value) {
+    foreach($data2 as $value){
         $tabid[] = $value["ID"];
         $tabquestion[] = $value["Question"];
         $tabreponse[] = $value["Reponse"];
@@ -130,14 +129,18 @@ if(isset($_POST['formvalidation']))
     $tab_to_json_reponse = json_encode((array)$tabreponse);
     $tab_to_json_id = json_encode((array)$tabid);
     ?>
+
     <script type="text/javascript">
         var tabreponse_php = <?php echo $tab_to_json_reponse ?>;
         var tabid_php = <?php echo $tab_to_json_id ?>;
         var tabquestion_php = <?php echo $tab_to_json_question ?>;
+        var nb_de_question_reponse = tabid_php.length;
 
         for (var i=0; i< tabid_php.length; i++){
             var newquestion = document.createElement("LI");
             var newreponse = document.createElement("LI");
+            let id = tabid_php[i];
+
 
             var question = tabquestion_php[i];
             var reponse = tabreponse_php[i];
@@ -145,25 +148,23 @@ if(isset($_POST['formvalidation']))
             newquestion.innerHTML = question;
             newreponse.innerHTML = reponse;
 
-            newquestion.className = "question";
-            newreponse.className = "reponse";
-
-            newquestion.id = tabid_php[i];
+            newquestion.id = "question";
             newreponse.id = tabid_php[i];
+            newreponse.className = "reponse"
+            newreponse.style.display = "none";
 
-            newquestion("click", function () {
-                onpageshow(newreponse);
+            newquestion.addEventListener("mouseover", function () {
+                document.getElementById(id).style.display = "block";
             });
 
+            newquestion.addEventListener("mouseout", function () {
+                document.getElementById(id).style.display = "none";
+            });
 
             document.getElementById('questionreponse').appendChild(newquestion);
             document.getElementById('questionreponse').appendChild(newreponse);
-
-
         }
     </script>
-
-
 
 </div>
 
