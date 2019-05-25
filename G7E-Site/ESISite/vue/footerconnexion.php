@@ -39,15 +39,15 @@
                     <div>Réseaux sociaux</div>
                     <a href="https://www.facebook.com/anvi.maison.connectee/">Facebook</a>
                     <br/>
-                    <a href="#">Twitter</a>
+                    <a href="https://twitter.com/ANVI71988514">Twitter</a>
                     <br />
                     <a href="#">Instagram</a>
                     <br /><br />
                     <div>Fixe :</div>
-                    <div class="non_selectionne">+33 (0)1 .. .. .. ..</div>
+                    <div class="non_selectionne">+33 (0)6 42 66 38 73</div>
                     <br />
                     <div>Mail :</div>
-                    <div class="non_selectionne">esi.mamaison@gmail.com</div>
+                    <div class="non_selectionne">anvi.maisonconnectee@gmail.com</div>
                 </div>
             </div>
             <div class="colonne">

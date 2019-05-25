@@ -9,29 +9,43 @@ if(isset($_POST['formvalidation']))
     echo "1";
     $adresse_mail_utilisateur = htmlspecialchars($_POST['mail']);
     $question_utilisateur = htmlspecialchars($_POST['QuestionUtilisateur']);
+
+    // Si tous les champs ne sont pas remplis, renvoie une erreur
     if (empty($_POST['mail']) || empty($_POST['QuestionUtilisateur']) ) //verifier si les champs sont vides ou non
-        {
-            $erreur = 'Tous les champs doivent être remplis';
-            echo "2";
-        }
+    {
+        $erreur = 'Tous les champs doivent être remplis';
+        echo "2";
+    }
+    // Envoi de mail
     else {
         echo "3";
-        //$adresse_anvi = "esi.mamaison@gmail.com";
+        //$adresse_anvi = "anvi.maisonconnectee@gmail.com";
+        $header = "MIME-Version:1.0\r\n";
+        $header.= 'From:"support ANVI"<anvi.maisonconnectee@gmail.com>'."\n";
+        $header.= 'Content-Type:text/html; cahset="utf-8"'."\n";
+        $header.= 'Content-Transfer-Encoding: 8bit';
         ini_set('display_errors', 1);
-        ini_set('SMTP','smtp.google.com');
-        ini_set('sendmail_from', $adresse_mail_utilisateur);
+        ini_set('SMTP','smtp.gmail.com');
+        //ini_set('sendmail_from', $adresse_mail_utilisateur);
         error_reporting(E_ALL);
-        $from = $adresse_mail_utilisateur;
-        $to = "hubert.laurent.isep@gmail.com";
-        //$to = $adresse_anvi;
-        $subject = "Question d'un utilisateur";
-        $message = $question_utilisateur;
-        $mail_envoye = mail($from, $to, $subject, $message);
 
-        if($mail_envoye) echo "Mail envoye  avec succes";
-        else echo "Erreur d'envoi du Mail ";
-        }
+        $corpsdumail = '
+        <html>
+            <body>
+                <div>
+                    Adresse mail de l\'expediteur : '.$adresse_mail_utilisateur.'<br>
+                    '.nl2br($question_utilisateur).'
+                </div>
+            </body>
+        </html>';
+
+        //$from = $adresse_anvi;
+        $subject = "Question d'un utilisateur";
+        //$message = '<html> <body> <div> $question_utilisateur; </div></body></html>';
+        mail("anvi.maisonconnectee@gmail.com", $subject, $corpsdumail, $header);
+        echo "Mail envoye  avec succes";
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,18 +56,19 @@ if(isset($_POST['formvalidation']))
     <link rel="stylesheet" href="vue/CSS/css.faq.css"/>
     <title> ESI - FAQ</title>
 
+    <!-- Permet de montrer/cacher les reponses -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.faq_question').click(function() {
+            $('.question').click(function() {
                 if ($(this).parent().is('.open')) {
-                    $(this).closest('.faq').find('.faq_answer_container').slideUp();
-                    $(this).closest('.faq').removeClass('open');
+                    $(this).closest('.conteneur_faq').find('.reponse').slideUp();
+                    $(this).closest('.conteneur_faq').removeClass('open');
                 } else {
-                    $('.faq_answer_container').slideUp();
-                    $('.faq').removeClass('open');
-                    $(this).closest('.faq').find('.faq_answer_container').slideDown();
-                    $(this).closest('.faq').addClass('open');
+                    $('.reponse').slideUp();
+                    $('.conteneur_faq').removeClass('open');
+                    $(this).closest('.conteneur_faq').find('.reponse').slideDown();
+                    $(this).closest('.conteneur_faq').addClass('open');
                 }
             });
         });
@@ -61,14 +76,14 @@ if(isset($_POST['formvalidation']))
 </head>
 <body>
 
-
+<!-- Bloc pour rediger sa question -->
 <div class = "BlocEcritureQuestion">
     <table align="center">
         <form method="POST" action="">
             <tr>
-             <td><br>
-                   Si votre question ne figure pas parmi les propositions ci-dessous, vous pouvez
-                   l'écrire ici, un membre de l'équipe support vous répondra dans les plus brefs délais :
+                <td><br>
+                    Si votre question ne figure pas parmi les propositions ci-dessous, vous pouvez
+                    l'écrire ici, un membre de l'équipe support vous répondra dans les plus brefs délais :
                 </td>
             </tr>
 
@@ -96,16 +111,17 @@ if(isset($_POST['formvalidation']))
     </table>
 </div>
 
-<div class="conteneur_faq">
+<div class="conteneur_faq open">
     <ul id="questionreponse">
     </ul>
 
+    <!-- Permet d'afficher directement les questions a partir de la BDD -->
     <?php
     $tabid = array();
     $tabquestion = array();
     $tabreponse = array();
     $data2 = recuperer_faq($bdd);
-    foreach($data2 as $value){
+    foreach($data2 as $value) {
         $tabid[] = $value["ID"];
         $tabquestion[] = $value["Question"];
         $tabreponse[] = $value["Reponse"];
@@ -114,18 +130,14 @@ if(isset($_POST['formvalidation']))
     $tab_to_json_reponse = json_encode((array)$tabreponse);
     $tab_to_json_id = json_encode((array)$tabid);
     ?>
-
     <script type="text/javascript">
         var tabreponse_php = <?php echo $tab_to_json_reponse ?>;
         var tabid_php = <?php echo $tab_to_json_id ?>;
         var tabquestion_php = <?php echo $tab_to_json_question ?>;
-        var nb_de_question_reponse = tabid_php.length;
 
         for (var i=0; i< tabid_php.length; i++){
             var newquestion = document.createElement("LI");
             var newreponse = document.createElement("LI");
-            let id = tabid_php[i];
-
 
             var question = tabquestion_php[i];
             var reponse = tabreponse_php[i];
@@ -133,22 +145,25 @@ if(isset($_POST['formvalidation']))
             newquestion.innerHTML = question;
             newreponse.innerHTML = reponse;
 
-            newquestion.id = "question";
+            newquestion.className = "question";
+            newreponse.className = "reponse";
+
+            newquestion.id = tabid_php[i];
             newreponse.id = tabid_php[i];
-            newreponse.className = "reponse"
 
-            newquestion.addEventListener("mouseover", function () {
-                document.getElementById(id).style.display = "block";
+            newquestion("click", function () {
+                onpageshow(newreponse);
             });
 
-            newquestion.addEventListener("mouseout", function () {
-                document.getElementById(id).style.display = "none";
-            });
 
             document.getElementById('questionreponse').appendChild(newquestion);
             document.getElementById('questionreponse').appendChild(newreponse);
+
+
         }
     </script>
+
+
 
 </div>
 

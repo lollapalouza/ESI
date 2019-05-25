@@ -48,7 +48,7 @@ else{
                         <div class="w3-padding w3-xlarge">
                             <i class="fa fa-check-circle" style="font-size:38px;color:orange"></i>
                         </div>
-                        <div class="interne">Etat de la maison</div>
+                        <div class="interne">État de la maison</div>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ else{
                             <div class="w3-padding w3-xlarge">
                                 <i class="fa fa-file-text" style="font-size:38px;color:orange"></i>
                             </div>
-                            <div class="interne">Pack</div>
+                            <div class="interne">Packs</div>
                         </div>
                     </div>
                 </a>
@@ -71,7 +71,7 @@ else{
                             <div class="w3-padding w3-xlarge">
                                 <i class="fa fa-wrench" style="font-size:35px;color:orange"></i>
                             </div>
-                            <div class="interne">Historique des données<br/> et statistiques</div>
+                            <div class="interne" align="center">Historique des données<br/> et statistiques</div>
                         </div>
                     </div>
                 </a>
@@ -86,15 +86,15 @@ else{
                     </div>
                 </a>
                 <div class="bloc_exte">
-                    <div class="bloc">
-                        <div class="interne">Date & heure <br />
+                    <div align="center" class="bloc">
+                        <div class="interne">Date & heure <br>
                             <span id="Paris_z71f" style="font-size:15px"></span>
                             <script src="//widget.time.is/fr.js"></script>
                             <script>
                                 time_is_widget.init({Paris_z71f:{template:"DATE<br>TIME" +
                                             "<br>" +
                                             "SUN", time_format:"hours:minutes", date_format:"dayname dnum monthname year",
-                                        sun_format:"Lever du soleil: srhour:srminute <br> Coucher du soleil: sshour:ssminute<br>",
+                                        sun_format:"Lever du soleil : srhour:srminute <br> Coucher du soleil : sshour:ssminute<br>",
                                         coords:"48.8534100,2.3488000"}});
                             </script>
                         </div>
