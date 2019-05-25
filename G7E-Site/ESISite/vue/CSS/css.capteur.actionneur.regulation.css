@@ -12,7 +12,15 @@ body{
 .conteneur_interne{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: "Segoe UI";
     color: #0160A2;
     font-size: 20px;
+    margin-top: 50px;
 }
+
+.radio{
+    font-size: 15px;
+}
+

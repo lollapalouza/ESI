@@ -38,32 +38,33 @@ if (isset($_POST['formactivation'])){
 </head>
 
 <body>
-<div class="pres">Vous avez choisi un : '<?php echo $typeModule?>' de nom : '<?php echo $nomModule ?>'</div>
+<?php
+$data3 = recuperer_consigne($bdd, $idModule);
+foreach ($data3 as $value) {
+    if($value['Valeur'] == 0){
+        $val = "désactivé";
+    }
+    else{
+        $val = "activé";
+    }
+}
+?>
+<div class="pres">Vous avez choisi un : '<?php echo $typeModule?>' de nom : '<?php echo $nomModule ?>' et le module est '<?php echo $val; ?>'</div>
 <div class="conteneur_interne">
-    <?php
-        $data3 = recuperer_consigne($bdd, $idModule);
-        foreach ($data3 as $value) {
-            if($value['Valeur'] == 0){
-                $val = "désactiver";
-            }
-            else{
-                $val = "activer";
-            }
-        }
-    echo $val;
-    ?>
     <form method="POST" action="">
         <table>
             <tr>
-                <td>
-                    <select class="select" name="type" id="type">
-                        <option value="activer">Activer</option>
-                        <option value="desactiver">Désactiver</option>
-                    </select>
+                <td class="radio">
+                    <label for="radio1">Activer
+                        <input type="radio" name="type" value="activer" id="radio1">
+                    </label>
+                    <label for="radio2">Désactiver
+                        <input type="radio" name="type" value="desactiver" id="radio2">
+                    </label>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td align="center">
                     <input type="submit" name="formactivation" value="valider">
                 </td>
             </tr>
