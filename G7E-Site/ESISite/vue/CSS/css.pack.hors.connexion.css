@@ -1,0 +1,242 @@
+body{
+    background-image: url("../image/ImageBase.jpg");
+    background-size : cover;
+}
+
+.packs{
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Segoe UI";
+    z-index: 2;
+}
+
+.pack {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.pack-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.pack:hover .pack-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.pack-front, .pack-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.pack-front {
+    background-color: #1D1D1D;
+    color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the back side */
+.pack-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    background-color: #1D1D1D;
+    color: #797C80;
+    transform: rotateY(180deg);
+}
+
+.pack2 {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.pack2-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.pack2:hover .pack2-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.pack2-front, .pack2-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.pack2-front {
+    background-color: #1D1D1D;
+    color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the back side */
+.pack2-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    background-color: #1D1D1D;
+    color: #797C80;
+    transform: rotateY(180deg);
+}
+
+.pack3 {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.pack3-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.pack3:hover .pack3-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.pack3-front, .pack3-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.pack3-front {
+    background-color: #1D1D1D;
+    color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the back side */
+.pack3-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    background-color: #1D1D1D;
+    color: #797C80;
+    transform: rotateY(180deg);
+}
+
+p{
+    font-size: 18px;
+}
+h2{
+  text-decoration: underline;
+}
+
+h3{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.video_container{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+header {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+}
+
+#conteneur_header{
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.HeaderPartieGauche{
+    z-index: 3;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.HeaderPartieDroit{
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.HeaderPartieGauche img{
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+
+a{
+    color: white;
+}
+
+#logo{
+    display: flex;
+}
+
+#lien{
+    font-family: "Segoe UI";
+    width: 200px;
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1D1D1D;
+}

@@ -24,7 +24,7 @@
         <div class="colonne">
             <h4 align="left">Nos offres</h4>
             <div class="information" align="left">
-                <a href="index.php?cible=packs&fonction=pack">Nos packs</a>
+                <a href="index.php?cible=packs&fonction=pack.hors.connexion">Nos packs</a>
                 <br /><br />
                 <!--
                 <a href="#">Nos capteurs</a>

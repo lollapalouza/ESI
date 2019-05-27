@@ -17,8 +17,18 @@ switch ($function){
     case 'achat_selection_pack':
         $vue = 'achat_selection_pack';
         break;
+    case 'pack.hors.connexion':
+        $vue = 'pack.hors.connexion';
+        break;
 }
-include ('vue/HeaderConnecte.php');
-include ('vue/' . $vue . '.php');
-include ('vue/footerconnexion.php');
+if($vue === 'pack.hors.connexion'){
+    include ('vue/' . $vue . '.php');
+    include ('vue/footerHorsConnexion.php');
+}
+else{
+    include ('vue/HeaderConnecte.php');
+    include ('vue/' . $vue . '.php');
+    include ('vue/footerconnexion.php');
+}
+
 ?>
