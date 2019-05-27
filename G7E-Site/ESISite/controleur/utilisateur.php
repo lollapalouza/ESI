@@ -44,7 +44,7 @@ if($vue == 'pageconnexion' || $vue == 'inscription'){
     include ('vue/' . $vue . '.php');
 }
 elseif ($vue == 'AccueilHorsConnexion'){
-    include ('vue/headerconnexion.php');
+//    include ('vue/headerconnexion.php');
     include ('vue/' . $vue . '.php');
     include ('vue/footerHorsConnexion.php');
 }

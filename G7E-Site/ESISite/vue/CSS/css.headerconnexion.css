@@ -1,4 +1,3 @@
-
 header {
     height: 93px;
     position: relative;
@@ -14,7 +13,7 @@ header {
     max-width: 100%;
     justify-content: space-between;
     align-items: center;
-
+    z-index: 2;
 }
 
 
@@ -25,6 +24,7 @@ header {
 
 .HeaderPartieDroit{
     display: flex;
+    color: white;
 }
 .HeaderPartieGauche img{
     margin-bottom: 30px;
