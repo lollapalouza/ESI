@@ -24,11 +24,13 @@
         <div class="colonne">
             <h4 align="left">Nos offres</h4>
             <div class="information" align="left">
-                <a href="">Nos packs</a>
+                <a href="index.php?cible=packs&fonction=pack">Nos packs</a>
                 <br /><br />
+                <!--
                 <a href="#">Nos capteurs</a>
                 <br /><br />
                 <a href="#">Nos actionneurs</a>
+                -->
             </div>
         </div>
         <div class="colonne">
@@ -39,10 +41,10 @@
                 <br/>
                 <a href="https://twitter.com/ANVI71988514">Twitter</a>
                 <br />
-                <a href="#">Instagram</a>
+                <a href="https://www.instagram.com/anvi_maison_connectee/">Instagram</a>
                 <br /><br />
                 <div>Fixe :</div>
-                <div class="non_selectionne">+33 (0)6 42 66 38 73</div>
+                <div class="non_selectionne">+33 (0)1 49 73 18 02</div>
                 <br />
                 <div>Mail :</div>
                 <div class="non_selectionne">anvi.maisonconnectee@gmail.com</div>
